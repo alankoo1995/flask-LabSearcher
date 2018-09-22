@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab Searcher</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<img src="" alt="">
+			<h2>Lab searcher</h2>
+		</div>
+		<div class="row">
+			<nav class="col-md-2 sidebar" style="padding-bottom: 20px">
+				<form action="/" method="POST">
+				<label>Start Time</label>
+				<input type="text" class="form-control" name="start_time" placeholder="Start Time">
+				<label>End Time</label>
+				<input type="text" class="form-control" name="end_time" placeholder="End Time">
+				<button type="submit" class="btn btn-outline-primary" style="margin-top:15px">Submit</button>
+				</form>
+			</nav>
+			<main class="col-md-10" style="background-color: 000000;">
+				<div class="table-responsive">
+					<table class="table table-bordered table-striped">
+						<td>Time</td>
+						<td>Available Lab</td>
+						{% for key in times %}
+						<tr>
+							<th>{{key}}</th>
+							<th>
+							{% for lab in labs %}
+							{{lab}}
+							{% endfor %}
+							</th>
+						</tr>
+						{% endfor %}
+						<tr>
+						</tr>
+					</table>
+				</div>
+			</main>
+		</div>
+	</div>
+
+	<!-- <div class="modal" id="exampleModal" data-backdrop="static">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5>Lab Chat</h5>
+					<button class="close" type="button" data-dismiss="modal"><span>&times;</span></button>
+				</div>
+				<div class="modal-body">
+					Let's chat!
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  		Lauched Lab Chat
+	</button>
+
+	<div class="modal fade" id="login-modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5>Login</h5>
+					<button class="close" type="button" data-dismiss="modal"><span>&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<form action="">
+						<div class="form-group">
+							<input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+							<input type="password" class="form-control" placeholder="Password"/>
+	 					</div>	
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<button type="button" class="btn btn-success" data-toggle="modal" data-target="#login-modal">
+  		Login!
+	</button> -->
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
